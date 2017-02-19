@@ -8,7 +8,7 @@ export class HttpErrorHandlerService {
   handleError(error: Response | any, toastr?: ToastsManager) {
     // In a real world app, we might use a remote logging infrastructure
     let errMsg: string;
-    let err;
+    let err: string;
     if (error instanceof Response) {
       const body = error.json() || '';
       err = body.error || JSON.stringify(body);

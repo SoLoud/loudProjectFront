@@ -1,0 +1,35 @@
+.mediaList {
+  background-color: #f7ebeb;
+  padding: 4px 4px 2px;
+}
+
+.mediaList .media {
+  background-color: white;
+  margin-bottom: 4px;
+  border: #e4004a solid 1px;
+}
+
+.plusbutton {
+  width: 80px;
+  height: 80px;
+  background-color: #e4004a;
+  border-radius: 50px;
+  right: 30px;
+  bottom: 30px;
+  position: fixed;
+  box-shadow: 0 4px 4px 0 lightgrey;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 80px;
+  vertical-align: middle;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.hashtag {
+  background-color: indianred;
+  color: white;
+  margin-right: 5px;
+  padding: 2px;
+}

@@ -38,6 +38,10 @@ export class LoginService {
     return true;
   }
 
+  getAccessToken(): string {
+    return localStorage.getItem("access_token");
+  }
+
   stateChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 }
 

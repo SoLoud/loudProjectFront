@@ -17,7 +17,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { FormErrorComponent } from './formError/formError.component';
 import { AboutComponent } from './about/about.component';
-import { ContestsComponent } from './contests/contests.component';
+import { ContestsListComponent, ContestsCreateComponent } from './contests/contests.component';
 import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
@@ -37,7 +37,7 @@ export function main() {
       TestBed.configureTestingModule({
         imports: [FormsModule, ReactiveFormsModule, RouterTestingModule.withRoutes(config)],
         declarations: [TestComponent, ToolbarComponent,
-          NavbarComponent, AppComponent, ContestsComponent,
+          NavbarComponent, AppComponent, ContestsListComponent, ContestsCreateComponent,
           HomeComponent, AboutComponent, LoginComponent, FormErrorComponent],
         providers: [
           { provide: APP_BASE_HREF, useValue: '/' }, LoginService

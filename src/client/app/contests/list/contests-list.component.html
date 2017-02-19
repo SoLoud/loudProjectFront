@@ -1,0 +1,23 @@
+<div class="mediaList">
+  <div *ngFor="let contest of contestList" class="media">
+    <div class="media-left">
+      <a>
+        <img *ngFor="let photo of contest.examplePhotos" width="64px" class="media-object" src="{{photo.url}}" alt="beast">
+      </a>
+    </div>
+    <div class="media-left">
+      <a>
+        <img *ngFor="let photo of contest.productPhotos" width="64px" class="media-object" src="{{photo.url}}" alt="beast">
+      </a>
+    </div>
+    <div class="media-body">
+      <h4 class="media-heading">{{contest.title}}</h4> {{contest.description}}
+      <div>
+        <span class="hashtag" *ngFor="let hashtag of contest.requiredHashTags">#{{hashtag}}</span>
+        <span class="hashtag" *ngFor="let hashtag of contest.optionalHashTags">#{{hashtag}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="plusbutton" title="Create Contest">+</div>

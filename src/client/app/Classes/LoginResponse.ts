@@ -7,4 +7,7 @@ export class LoginResponse {
   "User": User = null;
   ".issued": Date = null;
   ".expires": Date = null;
+
+  //Supress index signature 'any' type error
+  [key: string]: string | Date | number | User;
 }

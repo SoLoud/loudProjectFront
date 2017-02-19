@@ -1,11 +1,5 @@
-import { Component } from '@angular/core';
-
-@Component({
-  moduleId: module.id,
-  selector: 'contests',
-  templateUrl: 'contests.component.html',
-  styleUrls: ['contests.component.css']
-})
-export class ContestsComponent {
-
-}
+/**
+ * This barrel file provides the export sub-components of this root.
+ */
+ export * from './list/contests-list.component';
+ export * from './create/contests-create.component';

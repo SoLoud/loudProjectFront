@@ -8,7 +8,8 @@ import { RouterModule } from '@angular/router';
          (do not place feature module routes here, use an own -routing.module.ts in the feature instead)
        */
        { path: '', redirectTo: 'contests', pathMatch: 'full' },
-       { path: 'home', redirectTo: 'contests', pathMatch: 'full' }
+       { path: 'home', redirectTo: 'contests', pathMatch: 'full' },
+      //  { path: '**', redirectTo: 'contests', pathMatch: 'full' }, //this catches healthy urls like /contests too. TODO: fix this issue
     ])
   ],
   exports: [RouterModule]

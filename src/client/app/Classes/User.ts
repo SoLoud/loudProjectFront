@@ -16,4 +16,7 @@ export class User {
   AccessFailedCount: number = null;
   Id: string = null;
   UserName: string = null;
+
+  //Supress index signature 'any' type error
+  [key: string]: string | Array<any> | boolean | Date | number;
 }
