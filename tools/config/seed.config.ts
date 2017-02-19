@@ -378,6 +378,8 @@ export class SeedConfig {
       'dist/dev/*': '/base/dist/dev/*',
       '*': 'node_modules/*'
     },
+    map: {
+    },
     packages: {
     }
   };

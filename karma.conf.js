@@ -57,7 +57,10 @@ module.exports = function (config) {
 
       'test-config.js',
       'dist/dev/app/system-config.js',
-      'test-main.js'
+      'test-main.js',
+
+      //Toastr
+      'node_modules/ng2-toastr/bundles/ng2-toastr.js'
     ],
 
     // must go along with above, suppress annoying 404 warnings.

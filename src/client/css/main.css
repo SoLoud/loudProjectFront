@@ -1,18 +1,21 @@
 /* Reset */
-html,
-body,
-div {
+
+html, body, div {
   border: 0;
   margin: 0;
   padding: 0;
 }
 
+
 /* Box-sizing border-box */
+
 * {
   box-sizing: border-box;
 }
 
+
 /* Set up a default font and some padding to provide breathing room */
+
 body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-size: 16px;
@@ -39,15 +42,17 @@ li {
 }
 
 input {
-  border: 1px solid #106cc8;
+  border: 1px solid #e4004a;
   font-size: 14px;
   height: 40px;
   outline: none;
   padding: 8px;
+  border-radius: 20px;
 }
 
 button {
-  background-color: #106cc8;
+  border-radius: 20px;
+  background-color: #e4004a;
   border-style: none;
   color: rgba(255, 255, 255, 0.87);
   cursor: pointer;
@@ -56,8 +61,13 @@ button {
   height: 40px;
   padding: 8px 18px;
   text-decoration: none;
+  outline-width: 0px;
 }
 
 button:hover {
-  background-color: #28739e;
+  background-color: #c60745;
+}
+
+button:disabled {
+  background-color: lightgrey;
 }

@@ -1,0 +1,25 @@
+<form [formGroup]="loginForm" (ngSubmit)="doLogin($event, loginForm.controls.email.value, loginForm.controls.password.value)">
+  <div>
+    <img src="src/client/assets/ic_launcher1.png" />
+  </div>
+
+  <div>
+    <input formControlName="email" required type="email" placeholder="Your email">
+    <form-error *ngIf="loginForm.controls.email.touched && loginForm.controls.email.invalid">
+      Please enter your email
+    </form-error>
+  </div>
+
+  <div>
+    <input formControlName="password" type="password" placeholder="Your password">
+    <form-error *ngIf="loginForm.controls.password.touched && loginForm.controls.password.invalid">
+      Password required
+    </form-error>
+  </div>
+
+  <div>
+    <button type="submit" [disabled]="loginForm.invalid">
+      Log in
+    </button>
+  </div>
+</form>

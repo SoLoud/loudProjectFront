@@ -1,4 +1,5 @@
-<nav>
-  <a [routerLink]="['/']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">HOME</a>
+<nav *ngIf="isLogedIn">
+  <a [routerLink]="['/contests']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">CONTESTS</a>
   <a [routerLink]="['/about']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">ABOUT</a>
+  <a (click)="logout()" style="float: right;">LOGOUT</a>
 </nav>
