@@ -41,18 +41,24 @@ li {
   margin-top: 4px;
 }
 
-input {
-  border: 1px solid #e4004a;
-  font-size: 14px;
-  height: 40px;
-  outline: none;
-  padding: 8px;
-  border-radius: 20px;
+.soloud-primary {
+  background-color: #e4004a;
 }
 
-button {
+.soloud-primary.soloud-btn:hover {
+  background-color: #c60745;
+}
+
+.soloud-secondary {
+  background-color: #00c2e4;
+}
+
+.soloud-secondary.soloud-btn:hover {
+  background-color: #08a7c3;
+}
+
+.soloud-btn {
   border-radius: 20px;
-  background-color: #e4004a;
   border-style: none;
   color: rgba(255, 255, 255, 0.87);
   cursor: pointer;
@@ -64,10 +70,6 @@ button {
   outline-width: 0px;
 }
 
-button:hover {
-  background-color: #c60745;
-}
-
-button:disabled {
-  background-color: lightgrey;
+.soloud-btn:disabled {
+  background-color: lightgrey !important;
 }

@@ -47,12 +47,37 @@ export class Contest {
   description: string = null;
   createdAt: Date = null;
   endingAt: Date = null;
-  category: number = null;
+  category: ContestCategory = null;
   requiredHashTags: string[] = [];
   optionalHashTags: string[] = [];
   id: string = null;
   userId: string = null;
 
   //Supress index signature 'any' type error
-  [key: string]: string | Photo[] | Date | string[] | number;
+  [key: string]: string | Photo[] | Date | string[] | number | ContestCategory;
 }
+
+export class ContestCategory {
+  constructor(name: string, displayName?: string) {
+    this.Name = name;
+    if (!!displayName)
+      this.DisplayName = displayName;
+    else
+      this.DisplayName = name;
+  }
+  DisplayName: string = null;
+  Name: string = null;
+}
+
+export let ContestCategories: ContestCategory[] = [
+  new ContestCategory("Charity"),
+  new ContestCategory("Cosmetics"),
+  new ContestCategory("HomeDecoration", "Home Decoration"),
+  new ContestCategory("Entertainment"),
+  new ContestCategory("Fashion"),
+  new ContestCategory("Fitness"),
+  new ContestCategory("Charity"),
+  new ContestCategory("Food"),
+  new ContestCategory("Pets"),
+  new ContestCategory("Travel")
+]

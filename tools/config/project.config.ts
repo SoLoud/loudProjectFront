@@ -38,6 +38,16 @@ export class ProjectConfig extends SeedConfig {
 
     // Add packages (e.g. ng2-translate)
     let additionalPackages: ExtendPackages[] = [
+      {
+        name: 'hammerjs',
+        // Path to the package's bundle
+        path: 'node_modules/hammerjs/hammer'
+      },
+      {
+        name: 'md2',
+        // Path to the package's bundle
+        path: 'node_modules/md2/bundles/md2.umd.js'
+      }
       // {
       //   name: 'ng2-translate',
       //   // Path to the package's bundle

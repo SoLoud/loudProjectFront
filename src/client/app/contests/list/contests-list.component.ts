@@ -1,5 +1,8 @@
 import { Component, ViewContainerRef } from '@angular/core';
 import { Http, Headers, RequestOptions, Response, URLSearchParams } from '@angular/http';
+import { MdDialog, MdDialogRef } from '@angular/material';
+import { ContestsCreateComponent } from '../contests.component';
+import { DialogOptions } from '../../shared/modal/modal.component';
 
 import { HttpErrorHandlerService } from '../../shared/Services/HttpErrorHandler.service';
 import { LoginService } from '../../login/login.service';
@@ -14,10 +17,12 @@ import { Contest } from '../../Classes/Contest';
   styleUrls: ['contests-list.component.css']
 })
 export class ContestsListComponent {
-  constructor(private http: Http, private httpErrService: HttpErrorHandlerService, public toastr: ToastsManager, vcr: ViewContainerRef, private loginService: LoginService) {
+  constructor(public dialog: MdDialog, private http: Http, private httpErrService: HttpErrorHandlerService, public toastr: ToastsManager, vcr: ViewContainerRef, private loginService: LoginService) {
     this.fetchContests();
   }
-
+  openDialog() {
+    let dialogRef = this.dialog.open(ContestsCreateComponent, DialogOptions);
+  }
   contestList: Contest[] = []
 
   private extractData(res: Response): Contest[] {

@@ -1,0 +1,36 @@
+<!-- Modal -->
+<!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" md-color="primary">
+        <div type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></div>
+        <h4 class="modal-title" id="myModalLabel">
+          <ng-content select=".header"></ng-content>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <ng-content select=".body"></ng-content>
+      </div>
+      <div class="modal-footer">
+        <ng-content select=".footer"></ng-content>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div id="myModal">
+  <md-toolbar color="primary">
+    <h2 md-dialog-title>
+      <ng-content class="modal-header" select=".header"></ng-content>
+    </h2>
+    <!-- <ng-content class="modal-header" select=".header"></ng-content> -->
+  </md-toolbar>
+
+  <md-dialog-content style="padding:20px">
+    <ng-content class="modal-body" select=".body"></ng-content>
+  </md-dialog-content>
+
+  <md-dialog-actions style="padding:20px">
+    <ng-content select=".footer"></ng-content>
+  </md-dialog-actions>
+</div>

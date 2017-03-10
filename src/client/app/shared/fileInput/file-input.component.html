@@ -1,0 +1,11 @@
+<div>
+
+  <md-input-container style="width:100%">
+    <input mdInput disabled type="text" placeholder="Potato" />
+    <button mdSuffix md-fab color="primary" (click)="fileInput.click()"><md-icon>attachment</md-icon></button>
+  </md-input-container>
+
+  <input #fileInput multiple required type="file" placeholder="Product Photo" style="display:none" (change)="filesChanged($event, fileInput)" />
+  <!-- formControlName="productPhotos" -->
+
+</div>

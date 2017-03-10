@@ -4,6 +4,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import 'hammerjs';
 
 import { AboutModule } from './about/about.module';
 import { LoginModule } from './login/login.module';

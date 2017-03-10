@@ -7,6 +7,15 @@
   padding: 0 16px;
 }*/
 
+input {
+  border: 1px solid #e4004a;
+  font-size: 14px;
+  height: 40px;
+  outline: none;
+  padding: 8px;
+  border-radius: 20px;
+}
+
 form > div {
   padding: 2px;
   text-align: center;
