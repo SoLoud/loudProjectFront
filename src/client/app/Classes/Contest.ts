@@ -48,8 +48,8 @@ export class Contest {
   createdAt: Date = null;
   endingAt: Date = null;
   category: ContestCategory = null;
-  requiredHashTags: string[] = [];
-  optionalHashTags: string[] = [];
+  requiredHashTags: string = "";
+  optionalHashTags: string = "";
   id: string = null;
   userId: string = null;
 

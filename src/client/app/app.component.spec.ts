@@ -22,6 +22,7 @@ import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { ModalComponent } from './shared/modal/modal.component';
 import { MaterialModule } from '@angular/material';
+import { FileInputComponent } from './shared/fileInput/file-input.component';
 import { Md2Module } from 'md2';
 
 import { LoginService } from './login/login.service';
@@ -39,7 +40,7 @@ export function main() {
     beforeEach(() => {
       TestBed.configureTestingModule({
         imports: [FormsModule, ReactiveFormsModule, MaterialModule, Md2Module.forRoot(), RouterTestingModule.withRoutes(config)],
-        declarations: [TestComponent, ToolbarComponent, 
+        declarations: [TestComponent, ToolbarComponent, FileInputComponent,
           NavbarComponent, ModalComponent, AppComponent, ContestsListComponent, ContestsCreateComponent,
           HomeComponent, AboutComponent, LoginComponent, FormErrorComponent],
         providers: [

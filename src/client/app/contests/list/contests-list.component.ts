@@ -38,8 +38,10 @@ export class ContestsListComponent {
   }
 
   fetchContests(): void /*: Observable<Response>*/ {
-    var headers = new Headers({ "Content-Type": "application/json" });
-    var headers = new Headers({ "Authorization": "Bearer " + this.loginService.getAccessToken() });
+    var headers = new Headers({
+      "Content-Type": "application/json",
+      "Authorization": "Bearer " + this.loginService.getAccessToken()
+    });
     var requestOption = new RequestOptions({ headers: headers });
 
     //TODO: take api url from enviroment config

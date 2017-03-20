@@ -9,16 +9,16 @@
             <!-- this is used to align title and date fields -->
           </div>
           <md-input-container class="col-md-12">
-            <input mdInput formControlName="title" required type="text" placeholder="Τitle" />
+            <input mdInput name="title" required formControlName="title" type="text" placeholder="Τitle" />
           </md-input-container>
-          <form-error *ngIf="createContestForm.controls.title.touched && createContestForm.controls.title.invalid" style="text-align:right">
+          <form-error *ngIf="createContestForm.controls.title.invalid" style="text-align:right">
             Please enter a title
           </form-error>
         </div>
 
         <div class="col-md-5">
-          <md2-datepicker formControlName="endDate" required class="col-md-12" placeholder="End Date" min="new Date()"></md2-datepicker>
-          <form-error *ngIf="createContestForm.controls.endDate.touched && createContestForm.controls.endDate.invalid" style="text-align:right">
+          <md2-datepicker name="endDate" required formControlName="endDate" class="col-md-12" placeholder="End Date" min="new Date()"></md2-datepicker>
+          <form-error *ngIf="createContestForm.controls.endDate.invalid" style="text-align:right">
             Please enter an end date
           </form-error>
         </div>
@@ -27,14 +27,15 @@
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
           <md-input-container class="col-md-12">
-            <textarea mdInput formControlName="description" placeholder="Description" rows="4"></textarea>
+            <textarea mdInput name="description" formControlName="description" placeholder="Description" rows="4"></textarea>
           </md-input-container>
         </div>
       </div>
+      <br />
 
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <md-select formControlName="category" placeholder="Category" class="col-md-12">
+          <md-select name="category" formControlName="category" placeholder="Category" class="col-md-12">
             <!-- null option -->
             <md-option></md-option>
             <md-option *ngFor="let cat of categories" [value]="cat">
@@ -45,22 +46,26 @@
       </div>
 
       <div class="row">
-          <div class="col-md-5 col-md-offset-1">
-            <md2-chips formControlName="requiredHashTags" placeholder="Required Hashtags" class="col-md-12"></md2-chips>
-          </div>
-          <div class="col-md-5">
-            <md2-chips formControlName="optionalHashTags" placeholder="Optional Hashtags" class="col-md-12"></md2-chips>
-          </div>
+        <div class="col-md-5 col-md-offset-1">
+          <md2-chips name="requiredHashTags" formControlName="requiredHashTags" placeholder="Required Hashtags" class="col-md-12"></md2-chips>
+        </div>
+        <div class="col-md-5">
+          <md2-chips name="optionalHashTags" formControlName="optionalHashTags" placeholder="Optional Hashtags" class="col-md-12"></md2-chips>
+        </div>
       </div>
 
       <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <file-input class="col-md-12"></file-input>
-          <!-- <md-input-container class="col-md-12">
-            <input mdInput readonly type="text" [value]="createContestForm.controls.productPhotos" />
-          </md-input-container>
-          <button md-fab><md-icon>attachment</md-icon></button>
-          <input formControlName="productPhotos" multiple required type="file" placeholder="Product Photo" style="display:none" (change)="potato($event)" /> -->
+        <div class="col-md-5 col-md-offset-1">
+          <file-input name="productPhotos" formControlName="productPhotos" placeholder="Product Photοs" class="col-md-12"></file-input>
+        </div>
+        <div class="col-md-5">
+          <file-input name="examplePhotos" formControlName="examplePhotos" placeholder="Example Photοs" class="col-md-12"></file-input>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12" style="text-align:center">
+          <button type="submit" [disabled]="createContestForm.invalid" color="primary" md-raised-button>Submit</button>
         </div>
       </div>
 
